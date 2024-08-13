@@ -9,7 +9,7 @@ public class App {
     Funcionario f = new Funcionario("Thiago", "DEV", LocalDate.of(2023, 1, 13));
 
     FuncionarioControler fControler = new FuncionarioControler();
-    fControler.calcularFerias(f, LocalDate.of(2024, 10, 13), LocalDate.of(2024, 12, 13));
+    fControler.calcularFerias(f, LocalDate.of(2024, 10, 13), 30);
 
     System.out.println(f.toString());
   }
