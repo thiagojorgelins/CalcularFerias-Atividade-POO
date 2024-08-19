@@ -3,70 +3,81 @@ package models;
 import java.time.LocalDate;
 
 public class Funcionario {
-  private String nome;
-  private String cargo;
-  private LocalDate dataAdmissao;
-  private boolean deFerias;
-  private double saldoFerias;
+    private int id;
+    private String nome;
+    private String cargo;
+    private LocalDate dataAdmissao;
+    private boolean deFerias;
+    private double saldoFerias;
 
-  public Funcionario(String nome, String cargo, LocalDate dataAdmissao) {
-    this.nome = nome;
-    this.cargo = cargo;
-    this.dataAdmissao = dataAdmissao;
-    this.deFerias = false;
-  }
+    public Funcionario(int id, String nome, String cargo, LocalDate dataAdmissao) {
+        this.id = id;
+        this.nome = nome;
+        this.cargo = cargo;
+        this.dataAdmissao = dataAdmissao;
+        this.deFerias = false;
+    }
 
-  public Funcionario(String nome, String cargo) {
-    this.nome = nome;
-    this.cargo = cargo;
-    this.dataAdmissao = LocalDate.now();
-    this.deFerias = false;
-  }
+    public Funcionario(int id, String nome, String cargo) {
+        this.id = id;
+        this.nome = nome;
+        this.cargo = cargo;
+        this.dataAdmissao = LocalDate.now();
+        this.deFerias = false;
+    }
 
-  public String getNome() {
-    return nome;
-  }
+    public int getId() {
+        return id;
+    }
 
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  public String getCargo() {
-    return cargo;
-  }
+    public String getNome() {
+        return nome;
+    }
 
-  public void setCargo(String cargo) {
-    this.cargo = cargo;
-  }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-  public LocalDate getDataAdmissao() {
-    return dataAdmissao;
-  }
+    public String getCargo() {
+        return cargo;
+    }
 
-  public void setDataAdmissao(LocalDate dataAdmissao) {
-    this.dataAdmissao = dataAdmissao;
-  }
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 
-  public double getSaldoFerias() {
-    return saldoFerias;
-  }
+    public LocalDate getDataAdmissao() {
+        return dataAdmissao;
+    }
 
-  public void setSaldoFerias(double saldoFerias) {
-    this.saldoFerias = saldoFerias;
-  }
+    public void setDataAdmissao(LocalDate dataAdmissao) {
+        this.dataAdmissao = dataAdmissao;
+    }
 
-  public boolean isDeFerias() {
-    return deFerias;
-  }
+    public double getSaldoFerias() {
+        return saldoFerias;
+    }
 
-  public void setDeFerias(boolean deFerias) {
-    this.deFerias = deFerias;
-  }
+    public void setSaldoFerias(double saldoFerias) {
+        this.saldoFerias = saldoFerias;
+    }
 
-  @Override
-  public String toString() {
-    return "Funcionario [nome=" + nome + ", cargo=" + cargo + ", dataAdmissao=" + dataAdmissao + ", saldoFerias="
-        + saldoFerias + "]";
-  }
+    public boolean isDeFerias() {
+        return deFerias;
+    }
+
+    public void setDeFerias(boolean deFerias) {
+        this.deFerias = deFerias;
+    }
+
+    @Override
+    public String toString() {
+        return "{id:" + id + ", nome:" + nome + ", cargo:" + cargo + ", dataAdmissao:" + dataAdmissao
+                + ", deFerias:" + deFerias + ", saldoFerias:" + saldoFerias + "}";
+    }
 
 }
